@@ -34,8 +34,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<?php wp_head(); ?>
-	<link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/_assets/css/fixes.css">
-	<link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/_assets/css/main.css">
+	<link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/_assets/final/css/fixes.min.css">
+	<link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/_assets//final/css/main.css">
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
 	<link rel="apple-touch-icon" sizes="57x57" href="<?php bloginfo("template_url"); ?>/_assets/imgs/favicon/apple-icon-57x57.png">
