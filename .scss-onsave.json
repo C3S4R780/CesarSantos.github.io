@@ -1,6 +1,6 @@
 {
-	"inputDir": "_assets/src/scss/",
-	"outputDir": "_assets/final/css/",
+	"inputDir": "_assets/scss/",
+	"outputDir": "_assets/css/",
 	"useNpmSass": true,
 	"style":"compressed",
 	"sourcemap":"none",
