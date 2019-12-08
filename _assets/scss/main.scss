@@ -333,24 +333,70 @@ a:visited {
 
 .selfie {
 	display: flex;
-	align-items: center;
 	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	cursor: default;
 
 	&-img {
 		width: 180px;
+		position: relative;
+		z-index: 5;
 		transition: 300ms;
 		border-radius: 50%;
-		box-shadow: 0 0 15px black;
-
-		&:hover {
-			transform: scale(1.1);
-		}
+		box-shadow: 0 0 15px #000;
+		margin-bottom: 20px;
 	}
 
 	&-name{
-		cursor: default;
+		position: relative;
+		z-index: 4;
 		color: #bbb;
 		text-shadow: 0 0 10px #000;
+
+		h1{
+			margin: 0;
+			padding: 0 5px;
+			transition: 300ms ease-out;
+
+			&:hover{
+				transform: translateY(-5px);
+				box-shadow: 0 5px 5px #000;
+			}
+		}
+	}
+
+	&-description{
+		color: #bbb;
+		font-size: 22px;
+		font-family: 'Timeburner Bold';
+		text-align: center;
+		padding: 0 15%;
+		p {
+			position: relative;
+			transition: 300ms ease-out;
+			padding: 5px 0 10px 0;
+			&:hover{
+				transform: translateY(-5px) !important;
+				box-shadow: 0 5px 5px #000;
+			}
+		}
+		a{
+			color: inherit;
+			transition: 300ms ease-out;
+
+			&:hover{
+				text-decoration: underline !important;
+			}
+		}
+		img{
+			transition: 300ms ease-out;
+
+			&:hover{
+				margin: 0 10px;
+				transform: scale(1.1);
+			}
+		}
 	}
 }
 

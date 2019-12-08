@@ -36,15 +36,28 @@ get_header();
       <h1>Cesar Santos</h1>
     </div>
     <div class="selfie-description">
-      <p>Descrição sobre mim!</p>
+      <p>Sou desenvolvedor e programador a <?php echo date('Y') - 2017; ?> anos, comecei aprendendo HTML por diversão e acabei me interessando mais
+      por criação e manutenção de sites!</p>
+      <p>Embora eu não seja muito criativo quanto a designs, tento fazer um site que corresponda com o tipo de conteudo sem irritar ou
+        atrapalhar o usuario e sua navegação!</p>
+      <p>Mas isso não me impede de criar designs e layouts complexos! Se tiver a ideia, eu posso transformá-la em um site!</p>
+      <p>Atualmente trabalhando como Estagiario na
+        <a href="https://paprica.ag" target="_blank" rel="noopener noreferrer">
+          <img src="<?php bloginfo('template_url'); ?>/_assets/imgs/logo-paprica.svg" width="170px" style="vertical-align: top;" alt="">
+        </a>
+      </p>
     </div>
   </div>
 </section>
+<!--***Fim Sobre***-->
 
+<!--***Inicio Skills***-->
 <section id="section_skills" style="width:100%; height:100vh; display:flex; justify-content:center; align-items:center; border:1px solid #bbb">
   <h1 style="font-size: 50px; color:#fff; text-align:center;">WIP</h1>
 </section>
+<!--***Fim Skills***-->
 
+<!--***Inicio Contato***-->
 <section id="section_contato">
   <div class="contato_content">
     <div class="contato_title">
