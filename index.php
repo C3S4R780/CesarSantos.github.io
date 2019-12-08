@@ -15,7 +15,7 @@
 get_header();
 ?>
 <div class="screenBlock">
-  <h1>Este site está disponivel apenas para desktop ...</h1>
+  <h1>Este site está disponivel apenas para computadores ...</h1>
   <p>Por enquanto!</p>
 </div>
 <!--***Inicio Hero image***-->
@@ -67,8 +67,9 @@ get_header();
       <p>Caso possa ajuda-lo(a) em alguma coisa, não exite em entra em contato!</p>
     </div>
   </div>
-  <?php echo do_shortcode('[contact-form-7 id="5" title="Form Geral"]') ?>
+  <?php echo do_shortcode('[contact-form-7 id="144" title="Form Geral"]') ?>
 </section>
+<!--***Fim Contato***-->
 
 <?php
 get_footer();
