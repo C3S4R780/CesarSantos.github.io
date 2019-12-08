@@ -82,12 +82,13 @@
 		<span class="logo-header"><img src="<?php bloginfo('template_url') ?>/_assets/imgs/site-logo.png" alt=""></span>
 		<nav class="navbar">
 			<ul class="navbar-list">
-				<li href="#section_home">Home</li>
-				<li href="#section_sobre">Sobre</li>
-				<li href="#section_skills">Skills</li>
-				<li href="#section_contato">Contato</li>
+				<li class="navbar-item" href="#section_home">Home</li>
+				<li class="navbar-item" href="#section_sobre">Sobre</li>
+				<li class="navbar-item" href="#section_skills">Skills</li>
+				<li class="navbar-item" href="#section_contato">Contato</li>
 			</ul>
 		</nav>
+		<!-- <span class="navbar-menu"></span> -->
 	</header>
 <?php } ?>
 	<!--Fim Header -->
