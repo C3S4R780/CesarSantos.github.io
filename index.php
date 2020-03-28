@@ -21,7 +21,7 @@ get_header();
 <!--***Inicio Hero image***-->
 <section class="hero" id="section_home">
   <div class="hero-title">
-    <h1 class="">Olá! Meu nome é <span>CesarSantos</span></h1>
+    <h1>Olá! Meu nome é <span>Cesar Santos</span></h1>
     <h2>Sou <span>Desenvolvedor</span> e <span>Programador</span> WEB</h2>
   </div>
   <i class="next-section fas fa-angle-double-down"></i>
@@ -65,6 +65,14 @@ get_header();
     </div>
     <div class="contato_description">
       <p>Caso possa ajuda-lo(a) em alguma coisa, não exite em entra em contato!</p>
+    </div>
+    <div class="contato_metodos">
+      <p>Alem do formulário ao lado, você pode entrar em contato comigo pelas seguintes formas:</p>
+      <ul class="contato_list">
+        <li class="contato_whatsapp"><i class="fab fa-whatsapp"></i><br /><a href="https://wa.me/+5541987611116">Whatsapp</a></li>
+        <li class="contato_linkedin"><a href="#">Linked<i class="fab fa-linkedin"></i></a></li>
+        <li class="contato_phone">Ou pelo telefone:<br /><a href="tel:+5541987611116"><i class="fas fa-phone-alt"></i>(41) 98761-1116</a></li>
+      </ul>
     </div>
   </div>
   <?php echo do_shortcode('[contact-form-7 id="144" title="Form Geral"]') ?>
