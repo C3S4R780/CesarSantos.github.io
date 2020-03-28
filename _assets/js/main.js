@@ -12,7 +12,6 @@ window.onload = function () {
 
   // NavBar hamburger animation onClick
   $('.navbar-menu').click(function () {
-    console.log('test');
     $('.navbar-menu').toggleClass('close');
   });
 
@@ -36,7 +35,10 @@ window.onload = function () {
 
   // Hero Paralax onMouseMove
   document.querySelector('.hero').addEventListener('mousemove', function (e) {
-    parallaxIt(e, '.hero', -50);
+    parallaxIt(e, '.hero', -15);
+  });
+  document.querySelector('.hero').addEventListener('mousemove', function (e) {
+    parallaxIt(e, '.hero-title', -30);
   });
 
   // Paralax onMouseMove function
@@ -61,18 +63,31 @@ window.onload = function () {
     }, 'slow');
   })
 
-  // GSAP Timeline for the hero text animation
-  const gsapTl = gsap.timeline({ defaults: { duration: 1 } });
-  gsapTl.from(document.querySelector('.hero-title h1'), { opacity: 0 }, '+=.8')
-    .to(document.querySelector('.hero-title h1'), { opacity: 1, y: -25 }, '+=.5')
-    .from(document.querySelector('.hero-title h2'), { opacity: 0, y: -20 }, '-=1')
-    .to(document.querySelector('.hero-title h2'), { opacity: 1, y: 25 }, '-=1');
+  // GSAP Animations
+  // Hero section animation
+  const heroAnim = gsap.timeline({ defaults: { duration: 1 } })
+    .fromTo(document.querySelector('.hero-title h1'), { opacity: 0 }, { opacity: 1 }, '+=1')
+    .fromTo(document.querySelector('.hero-title h2'), { opacity: 0, y: -20 }, { opacity: 1, y: 25, }, '+=1')
+    .to(document.querySelector('.hero-title h1'), { y: -25 }, '-=1');
+  heroAnim.play();
 
-  const contactAnim = gsap.timeline({ defaults: { duration: 1.5 } })
-    .to($('.contato_content'), { ease: Elastic.easeOut.config(1, 0.5), left: '10%' })
-    .to($('.wpcf7'), { ease: Elastic.easeOut.config(1, 0.5), right: '15%' });
+  // About section animations
+  const aboutAnim = gsap.timeline({ defaults: { duration: 1 } })
+    .fromTo(document.querySelector('.selfie-img'), { width: 0 }, { ease: Back.easeInOut.config(0.3), width: 180 })
+    .fromTo(document.querySelector('.selfie-name'), { scale: 0, y: -125 }, { ease: Bounce.easeOut, scale: 1, y: 0 })
+    .fromTo(document.querySelectorAll('.selfie-description p'), { opacity: 0, y: -25 }, { opacity: 1, y: 0, stagger: 1 })
+  aboutAnim.pause();
 
-  // .from($('.wpcf7-form p'), { opacity: 0, y: -50, stagger: 0.5 });
+  // Skills section animations
+  const skillAnim = gsap.timeline({ defaults: { duration: 1 } })
+
+  skillAnim.pause();
+
+  // Contact section animations
+  const contactAnim = gsap.timeline({ defaults: { duration: 1 } })
+    .from(document.querySelector('.contato_content'), { ease: Elastic.easeOut.config(1, 0.5), left: '-40%' }, '+=1')
+    .from(document.querySelectorAll('.wpcf7-form p, .cf7sr-g-recaptcha'), { opacity: 0, y: -50, stagger: 0.5 });
+  contactAnim.pause();
 
   $(window).on('scroll', function () { // If page scroll...
 
@@ -84,10 +99,16 @@ window.onload = function () {
       $('header').css({ 'background-color': 'rgba(0,0,0,0)', 'height': '150px' })
       $('.next-section').css('opacity', '1');
     }
-    if (window.pageYOffset >= $('#section_contato').offset().top - 300) {
+
+    // Play section animations based on the scroll position of the screen
+    if (window.pageYOffset >= $('#section_sobre').offset().top - 90 && window.pageYOffset <= $('#section_skills').offset().top) {
+      aboutAnim.play();
+    }
+    if (window.pageYOffset >= $('#section_skills').offset().top - 90 && window.pageYOffset <= $('#section_contato').offset().top) {
+      skillAnim.play();
+    }
+    if (window.pageYOffset >= $('#section_contato').offset().top - 90) {
       contactAnim.play();
-    } else {
-      contactAnim.reverse();
     }
   });
 

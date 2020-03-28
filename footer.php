@@ -27,10 +27,8 @@
 
 <script src="https://kit.fontawesome.com/4ff97d205b.js" crossorigin="anonymous"></script>
 <script src="//cdn.jsdelivr.net/npm/gsap@3.0.1/dist/gsap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js" integrity="sha256-+9YNuItWuR4sbqeaNiJOxG0BvptYz4fbUXbIZoH5Jwo=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.3/jsmediatags.min.js"></script>
 
 <script src="<?php bloginfo("template_url"); ?>/_assets/js/all.min.js" charset="utf-8"></script>
 </body>
